@@ -1,197 +1,119 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>84</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
-    />
-    <script
-      src="https://kit.fontawesome.com/0ca0e55b9a.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <nav
-      class="navbar is-mobile has-background-dark"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="navbar-brand section">
-        <a href ="https://github.com/Nataliasoledadnavarro/api-usuarios" aria-label = "Ruta al github del proyecto">
-        <h1 class="title is-1 has-text-grey-lighter">API DE USUARIOS</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>84</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
+  <script src="https://kit.fontawesome.com/0ca0e55b9a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar  has-background-dark" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="https://github.com/Nataliasoledadnavarro/api-usuarios" aria-label="Ruta al github del proyecto">
+        <h1 class="title is-1 has-text-grey-lighter is-size-2-mobile m-3">API DE USUARIOS</h1>
       </a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <button id="boton-agregar-usuario" class="button is-light is-link is-focused m-3">
+          Agregar usuario
+        </button>
       </div>
-      <div class="navbar-end section">
-        <div class="navbar-item">
-          <button id="boton-agregar-usuario" class="button is-light is-link is-focused">
-            Agregar usuario
+    </div>
+  </nav>
+  <main>
+    <div class="modal" id="formulario">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <form action="" class="column is-8 is-offset-1">
+          <div class="field">
+            <label class="label has-text-warning-light" for="input-nombre">Nombre</label>
+            <div class="control">
+              <input class="input is-warning" type="text" name="nombre" id="input-nombre" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-warning-light" for="input-email">Email</label>
+            <div class="control">
+              <input class="input is-warning" type="email" name="email" id="input-email" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-warning-light" for="inputdireccion">Dirección</label>
+            <div class="control">
+              <input class="input is-warning" type="text" name="direccion" id="input-direccion" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label has-text-warning-light" for="input-telefono">Teléfono</label>
+            <div class="control">
+              <input class="input is-warning" type="phone" name="telefono" id="input-tel" />
+            </div>
+          </div>
+
+          <button class="button is-warning" id="boton-agregar">
+            Agregar
           </button>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <div class="modal" id="formulario">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <form action="" class="column is-8 is-offset-1">
-            <div class="field">
-              <label class="label has-text-warning-light" for="input-nombre"
-                >Nombre</label
-              >
-              <div class="control">
-                <input
-                  class="input is-warning"
-                  type="text"
-                  name="nombre"
-                  id="input-nombre"
-                />
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label has-text-warning-light" for="input-email"
-                >Email</label
-              >
-              <div class="control">
-                <input
-                  class="input is-warning"
-                  type="email"
-                  name="email"
-                  id="input-email"
-                />
-              </div>
-            </div>
-
-            <div class="field">
-              <label class="label has-text-warning-light" for="inputdireccion"
-                >Dirección</label
-              >
-              <div class="control">
-                <input
-                  class="input is-warning"
-                  type="text"
-                  name="direccion"
-                  id="input-direccion"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label has-text-warning-light" for="input-telefono"
-                >Teléfono</label
-              >
-              <div class="control">
-                <input
-                  class="input is-warning"
-                  type="phone"
-                  name="telefono"
-                  id="input-tel"
-                />
-              </div>
-            </div>
-
-            <button class="button is-warning" id="boton-agregar">
-              Agregar
-            </button>
-          </form>
-        </div>
-
-        <button
-          class="modal-close is-large"
-          aria-label="close"
-          id="cerrar-agregar-usuario"
-        ></button>
+        </form>
       </div>
 
-      <div class="modal" id="formulario-editar">
-        <div class="modal-background"></div>
-        <div class="modal-content">
-          <form action="" class="column is-8 is-offset-1">
-            <div class="field">
-              <label class="label has-text-link-light" for="input-editar-nombre"
-                >Nombre</label
-              >
-              <div class="control">
-                <input
-                  class="input is-info"
-                  type="text"
-                  name="nombre"
-                  id="input-editar-nombre"
-                />
-              </div>
-            </div>
+      <button class="modal-close is-large" aria-label="close" id="cerrar-agregar-usuario"></button>
+    </div>
 
-            <div class="field">
-              <label class="label has-text-link-light" for="input-editar-email"
-                >Email</label
-              >
-              <div class="control">
-                <input
-                  class="input is-info"
-                  type="email"
-                  name="email"
-                  id="input-editar-email"
-                />
-              </div>
+    <div class="modal" id="formulario-editar">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <form action="" class="column is-8 is-offset-1">
+          <div class="field">
+            <label class="label has-text-link-light" for="input-editar-nombre">Nombre</label>
+            <div class="control">
+              <input class="input is-info" type="text" name="nombre" id="input-editar-nombre" />
             </div>
+          </div>
 
-            <div class="field">
-              <label
-                class="label has-text-link-light"
-                for="input-editar-direccion"
-                >Dirección</label
-              >
-              <div class="control">
-                <input
-                  class="input is-info"
-                  type="text"
-                  name="direccion"
-                  id="input-editar-direccion"
-                />
-              </div>
+          <div class="field">
+            <label class="label has-text-link-light" for="input-editar-email">Email</label>
+            <div class="control">
+              <input class="input is-info" type="email" name="email" id="input-editar-email" />
             </div>
-            <div class="field">
-              <label
-                class="label has-text-link-light"
-                for="input-editar-telefono"
-                >Teléfono</label
-              >
-              <div class="control">
-                <input
-                  class="input is-info"
-                  type="phone"
-                  name="telefono"
-                  id="input-editar-tel"
-                />
-              </div>
+          </div>
+
+          <div class="field">
+            <label class="label has-text-link-light" for="input-editar-direccion">Dirección</label>
+            <div class="control">
+              <input class="input is-info" type="text" name="direccion" id="input-editar-direccion" />
             </div>
+          </div>
+          <div class="field">
+            <label class="label has-text-link-light" for="input-editar-telefono">Teléfono</label>
+            <div class="control">
+              <input class="input is-info" type="phone" name="telefono" id="input-editar-tel" />
+            </div>
+          </div>
 
-            <button class="button is-info" id="enviar-edicion">Editar</button>
-          </form>
-        </div>
-
-        <button
-          class="modal-close is-large"
-          aria-label="close"
-          id="cerrar-editar-usuario"
-        ></button>
+          <button class="button is-info" id="enviar-edicion">Editar</button>
+        </form>
       </div>
 
-      <!-- tr: table row: fila de tabla
+      <button class="modal-close is-large" aria-label="close" id="cerrar-editar-usuario"></button>
+    </div>
+
+    <!-- tr: table row: fila de tabla
   th: table header: encabezado de tabla
   td: tabla data: datos de la tabla -->
-      <div class="table-container section">
-        <table
-          class="tabla-usuarios table is-striped is-fullwidth"
-          id="tabla"
-        ></table>
-      </div>
+    <div class="table-container section">
+      <table class="tabla-usuarios table is-striped is-fullwidth" id="tabla"></table>
+    </div>
 
-      <script src="index.js"></script>
-    </main>
-  </body>
+    <script src="index.js"></script>
+  </main>
+</body>
+
 </html>

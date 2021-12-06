@@ -56,8 +56,8 @@ const crearTablaHTML = (data) => {
       <td>${curr.address}</td>
       <td>${curr.phone}</td>
       <td>
-      <button id="${curr.id}" class="button is-info is-small is-rounded boton-editar"><i class="far fa-edit"></i></button>
-      <button id="${curr.id}" class="button is-danger is-small is-rounded boton-eliminar"><i class="fas fa-trash"></i></button>
+      <button id="${curr.id}" class="button is-info is-small is-rounded boton-editar m-1"><i class="far fa-edit"></i></button>
+      <button id="${curr.id}" class="button is-danger is-small is-rounded boton-eliminar m-1"><i class="fas fa-trash"></i></button>
       </td>
     </tr>
     `
@@ -159,7 +159,7 @@ const editarUsuario = () => {
           .then((data) => {
             pedirInfoActualizada();
           });
-          formularioEditar.classList.remove("is-active");
+        formularioEditar.classList.remove("is-active");
       };
     };
   }
