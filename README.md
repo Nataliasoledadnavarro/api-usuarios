@@ -2,7 +2,10 @@
 
 <p>Comenzamos a interactuar con API REST y como primer ejercicio generé esta lista de usuarios.</p>
 
-<ul>Podrás:
+[Link al proyecto](https://nataliasoledadnavarro.github.io/api-usuarios/)
+
+<h3>Podrás:</h3>
+<ul>
 <li>Agregar nuevo usuario</li>
 <li>Editarlos</li>
 <li>Eliminarlos</li>
@@ -14,3 +17,5 @@
 <li>BULMA</li>
 <li>JavaScript</li>
 </ul>
+
+Hecho con curiosidad y entusiasmo por [Naty](https://www.linkedin.com/in/nataliasoledadnavarro/)
